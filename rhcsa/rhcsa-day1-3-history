@@ -1,0 +1,519 @@
+exit
+visudo
+id user
+usermod -aG wheel user
+id user
+exit
+env
+exit
+env
+exit
+su - linda
+reboot
+cd /
+ls
+ls -l
+cd /usr
+ls 
+cd sbin
+ls
+pwd
+cd /var
+ls
+cd log
+ls
+tail messages
+cd /
+ls
+cd etc
+ls
+cat networks 
+man hier
+cd /home
+ls
+cd /root
+ls
+cd /boot
+ls -l
+ls
+dir
+alias
+ls
+cd /root
+cd usr
+ls
+cd /usr
+pwd
+cd lib/systemd/system
+pwd
+cd -
+cd -d
+cd -
+cd
+ls
+ls -l
+ls -a
+cp /etc/hosts .
+ls
+mv host /tmp/
+mv hosts /tmp/
+ls
+cd /tmp
+ls
+mv hosts blah
+ls -l
+rm blah
+rm -f blah
+exit
+vi myfile
+vim myfile 
+ls
+ls -a
+rm -f .myfile.swp 
+vim myfile 
+which vi
+which vim
+ls -l vi vim
+ls -l /bin/vi /bin/vim
+ls -l /etc/hosts
+ln /etc/hosts myhosts
+ls -li /etc/hosts myhosts
+echo hello >> myhost
+echo hello >> myhosts
+ls -li /etc/hosts myhosts
+ln -s myhosts mysymhosts
+ls -li /etc/hosts myhosts mysymhosts 
+mv mysymhosts /tmp
+ls -l /tmp/mysymhosts
+mv /tmp/mysymhosts .
+ls -li /etc/hosts myhosts mysymhosts 
+rm myhosts
+ls -li /etc/hosts myhosts mysymhosts 
+history
+ln /etc/hosts myhosts
+ls -li /etc/hosts myhosts mysymhosts 
+cd /
+ls -l
+ssh sander@192.168.1.248
+ls -l
+cd
+ln -s /home/user/countdown countdown
+ls -l
+./countdown 1
+man man
+man -k user
+man -k user | wc
+man -k user | grep 8
+poweroff
+man -k user | grep 8
+man -k sander
+man man
+man apropos
+mandb
+vim /etc/login.defs 
+groupadd --help
+groupadd sales
+vim /etc/group
+grep sales /etc/group
+useradd --help
+useradd -G sales lisa
+id lisa
+grep lisa /etc/passwd
+man 5 passwd
+vigr 
+vipw
+id linda
+usermod --help
+id user
+usermod -G sales user
+id user
+usermod -aG wheel user
+usermod -aG sales linda
+id linda
+grep linda /etc/shadow
+grep root /etc/shadow
+passwd linda
+passwd lisa
+usermod --help
+usermod -l sander user
+vipw
+exit
+passwd --help
+grep linda /etc/shadow
+passwd -l linda
+grep linda /etc/shadow
+passwd -u linda
+chage
+chage linda
+chvt 2
+ls -l /home/
+ls -l /etc/hosts
+mkdir /data/sales
+mkdir -p /data/sales
+cd /data
+ls -l
+chgrp sales sales
+ls -l
+chown lisa sales
+ls -l
+chmod 770 sales
+ls -lk
+cd /home/linda
+touch rootfile
+su - linda
+cd
+cd  /data
+ls -l
+cd /home/linda
+vim runme
+chmod +x runme
+ls -l
+su - linda
+chmod u+s runme 
+ls -l
+su -
+su - linda
+ls -l /etc/shadow /usr/bin/passwd
+find / -perm /4000
+find / -perm /4000 2>/dev/null
+find / -perm /4000 2>/dev/null > ~/suidfile1.txt
+chmod u-s /home/linda/runme
+find / -perm /4000 2>/dev/null > ~/suidfile2.txt
+diff ~/suidfile1.txt ~/suidfile2.txt 
+history
+cd /data
+grep sales /etc/group
+ls
+su - linda
+chmod g+s /data/sales
+ls -l
+su - lisa
+cd sales/
+touch root1
+ls -l
+id
+su - linda
+chmod o+t .
+ls -ld .
+su - lisa
+su - linda
+cd ..
+chmod 4770 sales
+ls -l
+groupadd account
+ls -l
+getfacl sales
+chmod 3770 sales
+getfacl sales
+chmod u-s sales
+getfacl sales
+setfacl -m -R g:account:rX sales/
+setfacl -R -m g:account:rX sales/
+getfacl sales/
+setfacl -m d:g:account:rX sales/
+getfacl sales/
+cd sales
+mkdir 2018
+getfacl 2018
+history
+cd
+cp /etc/hosts .
+getfacl hosts
+setfacl -m u:lisa:r hosts
+getfacl
+getfacl hosts 
+pwd
+./countdown 11
+cd /etc/yum.repos.d/
+ls
+for i in *; do mv $i .$i; done
+ls
+ls -a
+mount 
+mount | grep '^/'
+mount /dev/sr0 /media
+mount | grep '^/'
+vim /etc/fstab
+umount /media
+mount -a
+mount | grep '^/'
+history
+cd /media
+ls
+cd Packages/
+ls
+cd ..
+cd repodata/
+ls
+cd 
+vim /etc/yum.repos.d/disk.repo
+yum clean all
+yum repolist
+./countdown 1
+man -k yum 
+man yum.conf
+cat /etc/fstab
+cat /etc/yum.repos.d/disk.repo 
+mount
+history
+mount | grep '^/'
+cd /myrepo
+mkdir /repo
+cd /repo
+yumdownloader vsftpd
+yumdownloader httpd
+ls
+cd /
+createrepo /repo/
+cd repo/
+ls
+cd /etc/yum.repos.d/
+vim my.repo
+yum repolist
+history
+cd
+yum search nmap
+yum search semanage
+yum info libsemanage
+yum provides sealert
+yum search nmap
+yum install nmap-ncat
+yum install mod_ssl
+yumdownloader mod_ssl
+ls -l
+rpm -ivh ./mod_ssl-2.4.6-80.el7.centos.x86_64.rpm 
+yum install mod_ssl -y
+yum groups list
+yum groups install Security Tools
+yum groups install "Security Tools"
+yum remove httpd
+yum remove bash
+cat /etc/yum.repos.d/my.repo 
+history
+yum list installed
+yum update
+history
+rpm -ql mod_ssl
+rpm -ql httpd
+rpm -qc httpd
+rpm -qd httpd
+cd /repo
+ls
+rpm -qpl httpd-2.4.6-80.el7.centos.x86_64.rpm 
+rpm -qp --scripts httpd-2.4.6-80.el7.centos.x86_64.rpm 
+history
+rpm -qp --scripts httpd-2.4.6-80.el7.centos.x86_64.rpm 
+cd
+./countdown 11
+ip a
+ip addr add dev ens33 10.0.0.10/24
+ip a
+ifconfig
+man ifconfig
+which ifconfig
+rpm -qf $(which ifconfig)
+yum remove net-tools
+history
+ifconfig
+ip route show
+ip route del default via 192.168.4.2
+ip route
+ping nu.nl
+ip route add default via 192.168.4.2
+ip route show
+ping nu.nl
+cat /etc/resolv.conf 
+rm -f /etc/resolv.conf 
+ping nu.nl
+systemctl status NetworkManager
+systemctl restart NetworkManager
+ping nu.nl
+cat /etc/resolv.conf 
+netstat -tulpen
+ss tuna
+ss -tuna
+ss -tunap
+nmtui
+ip a
+cd /etc/sysconfig/network-scripts/
+ls
+vim ifcfg-ens33 
+ip a
+systemctl restart NetworkManager
+ip a
+ifdown ens33; ifup ens33
+ip a
+man nmcli-examples
+yum install bash-completion
+nmcli connection modify ens33 ipv4.addresses 192.168.4.228/24
+cat /etc/sysconfig/network-scripts/ifcfg-ens33 
+nmcli connection up ens33 
+ip 
+ip a
+vim ~/.bashrc
+source .bashrc
+source ~/.bashrc
+h
+grep history ~/.bashrc
+lsblk
+poweroff
+./countdown 11
+lsblk
+fdisk /dev/sdb
+lsblk
+mkfs.xfs /dev/sdb1
+mount /dev/sdb1 /mnt
+cd /mnt
+ls
+touch hello
+cd 
+umount /mnt
+ls /mnt
+mount /dev/sdb1 /mnt
+ls /mnt
+lsblk
+fdisk /dev/sdb
+lsblk
+partprobe
+lsblk
+mkfs.ext4 /dev/sdb5
+mkfs.xfs /dev/sdb6
+mkdir /ext4
+mkdir /xfs
+vim /etc/fstab
+mount -a
+mount
+history
+tail -n 2 /etc/fstab
+lsblk
+fdisk /dev/sdb
+vim /etc/fstab
+reboot
+blkid
+vim /etc/fstab
+xfs_admin --help
+xfs_admin -L XFS /dev/sdb5
+umount /dev/sdb5
+xfs_admin -L XFS /dev/sdb5
+tune2fs -L EXT4 /dev/sdb9
+vim /etc/fstab
+history
+blkid
+lsblk
+fdisk /dev/sdb
+lsblk
+pvcreate /dev/sdb6
+pvs
+vgcreate --help | less
+vgcreate -s 8m vgdata /dev/sdb6
+vgs
+echo $(( 496 / 8 ))
+echo $(( 62 * 8 ))
+vgdisplay vfdata
+vgdisplay vgdata
+lvcreate --help | less
+lvcreate -L 500M -n lvdata vgdata
+lvcreate -l 100%FREE -n lvdata vgdata
+lvs
+mkfs.ext4 /dev/vgdata/lvdata
+vim /etc/fstab
+mount -a
+mkdir /lvdata
+mount -a
+mount
+ls -l /dev/mapper/vgdata-lvdata /dev/vgdata/lvdata 
+h
+fdisk -l /dev/sdb
+fdisk /dev/sdb
+lvresize --help
+lvresize --help | less
+man lvresize
+lvextend --help | less
+man lvextend
+vgs
+man vgextend
+vgextend vgdata /dev/sdb7
+vgs
+lvextend -L +10M /dev/vgdata/lvdata 
+lvs
+df -h
+man -k resize
+xfs_growfs --help
+df -h
+xfs_growfs /lvdata
+mount
+man -k resize
+resize2fs --help
+resize2fs /dev/vgdata/lvdata
+df -h
+history
+./countdown 11
+lvresize -l +10%FREE /dev/vgdata/lvdata -r
+df -h
+lvresize -L -100M -r /dev/vgdata/lvdata
+df -h
+top
+grep -i active /proc/meminfo 
+fdisk /dev/sdb
+partprobe
+lsblk
+mkswap /dev/sdb8
+free -m
+swapon /dev/sdb8
+free -m
+vim /etc/fstab
+top
+vgs
+lvcreate -n lvswap -L 500M vgdata
+mkswap /dev/vgdata/lvswap 
+swapon /dev/vgdata/lvswap
+free -m
+vim /etc/fstab
+poweroff
+./countdown 1
+nmtui
+ping 192.168.4.201
+ssh 192.168.4.201
+ssh -X 192.168.4.201
+vim /etc/resolv.conf 
+vim /etc/sysconfig/network-scripts/ifcfg-ens33 
+yum groups install "Directory Client" 
+authconfig-tui 
+su - ldapuser1
+cat /etc/resolv.conf 
+ping google.com
+ping sandervanvugt.com
+./countdown 11
+reboot
+yum install nss-pam-ldapd
+yum install pam_krb5 -y
+cd /etc/openldap/cacerts/
+ls
+scp labipa:/etc/ipa/ca.crt .
+scp labipa.example.com:/etc/ipa/ca.crt .
+cat /etc/resolv.conf 
+scp 192.168.4.201:/etc/ipa/ca.crt .
+ls
+ls -l
+ssh 192.168.4.201
+reboot
+systemctl isolate graphical.target
+vim /etc/default/grub 
+grub2-mkconfig -o /boot/grub2/grub.cfg
+vim /boot/grub2/grub.cfg 
+cat /etc/redhat-release 
+systemctl list-unit-files
+systemctl list-units
+systemctl status sshd
+yum install vsftpd
+systemctl status vsftpd
+systemctl start vsftpd
+systemctl status vsftpd
+systemctl enable vsftpd
+systemctl status vsftpd
+systemctl get-default
+systemctl set-default multi-user.target
+reboot
+systemctl set-default grahical.target
+systemctl set-default graphical.target
+reboot

@@ -1,0 +1,58 @@
+yum install ipa-server bind-dyndb-ldap ipa-server-dns
+kill -9 12666
+yum install ipa-server bind-dyndb-ldap ipa-server-dns
+hostnamectl set-hostname labipa.example.com
+hostnamectl --help
+vim /etc/hosts
+ipa-server-install --setup-dns --allow-zone-overlap
+exit
+history
+exit
+vim /etc/hosts
+ipa-server-install --setup-dns --allow-zone-overlap
+systemctl stop firewalld
+systemctl disable firewalld
+kinit admin
+klist
+ipactl --help
+ipactl status
+free -m
+exit
+history
+exit
+history
+tail -n 1 /etc/hosts
+dd if=/dev/sr0 of=/tmp/centos75.iso bs=1M &
+poweroff
+yum groups list
+yum groups install "Virtualization Host" 
+yum install virt-manager -y
+virt-manager &
+exit
+virt-manager &
+lsmod
+lsmod | grep kvm
+systemctl status libvirtd
+virsh --help | less
+virsh list
+grep vmx /proc/cpuinfo 
+free -m
+exit
+ipactl status
+virsh list
+virsh destroy centos7.0
+free -m
+ipactl start
+ipactl status
+free -m,
+free -m
+virsh list
+cd /var/lib/libvirt/
+ls
+cd images/
+ls
+ls -l
+df -h
+history
+ip a
+exit
